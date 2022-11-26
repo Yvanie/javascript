@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning javascript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion des apprennent</h1>
+    
+        <form name="form" id="form" onsubmit="event.preventDefault()">
+            <div>
+                <label for="nom">Nom</label><br>
+                <input type=" text" name="nom" id="nom" required >
+            </div>
+            <div>
+                <label for="postnom">Postnom</label><br>
+                <input type=" text" name="postnom" id="postnom" required>
+            </div>
+            <div>
+                <label for="prenom">Prenom</label><br>
+                <input type=" text" name="prenom" id="prenom" required>
+            </div>
+            <div>
+                <label for="pays">Pays</label><br>
+                <input type=" text" name="pays" id="pays" required>
+            </div>
+            <div>
+                <label for="genre">Genre</label><br>
+                <input type=" text" name="genre" id="genre" required>
+            </div>
+            <div>
+                <label for="github">Github</label><br>
+                <input type=" text" name="github" id="github" required>
+            </div><br>
+            <div>
+                <button type="submit" value="Submit" id="btnsubmit"></button>
+            </div>
+        </form>
+        <table class="list" >
+            <thead>
+                     <tr>
+                        <th>Nom</th>
+                        <th>Postnom</th>
+                        <th>Prenom</th>
+                        <th>Pays</th>
+                        <th>Genre</th>
+                        <th>Github</th>
+                    </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    <script src="js/index.js"></script>
+</div>
+</body>
+</html>
