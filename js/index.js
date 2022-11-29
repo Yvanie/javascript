@@ -47,7 +47,7 @@ function loadapprennetInTable(){
     <button class="btn btn-success" data-nom="${list.nom}" data-postnom="${list.postnom}" data-prenom="${list.prenom}" 
     data-pays="${list.pays}" data-genre="${list.genre}" data-github="${list.github}" 
     onclick= "editApprennent(this)"><i class="fas fa-edit"></i></button>
-    <button class="btn btn-danger" onclick="deleteApprennent(confirmation(this, ${apprennents.indexOf(list)}))"> 
+    <button class="btn btn-danger" onclick="confirmation(this, ${apprennents.indexOf(list)})"> 
     <i class="fa fa-trash" aria-hidden="true"></i>
    </button>
     </td>
@@ -113,10 +113,7 @@ function addApprennant(){
         genre.value = ''
         github.value = ''
 }
-function deleteApprennent(e){
-    console.log(e.parentNode.parentNode.remove())
 
-}
 function deleteApprennent(e, index){
     apprennents.splice(index, 1)
     loadapprennetInTable()
@@ -127,6 +124,7 @@ function confirmation(e, index){
     if(result == true){
         deleteApprennent(e, index);
     }
+    console.log(result);
 }
 function editApprennent(e, list){
     //console.log (e.dataset.nom, e.dataset.postnom, e.dataset.prenom, e.dataset.pays, e.dataset.genre, e.dataset.github )
