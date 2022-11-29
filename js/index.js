@@ -15,19 +15,19 @@ let apprennents =[
     {
         'nom': "Yvanie",
         'postnom' : "yva",
-        'prenom' : "yvan",
+        'prenom' : "Noelle",
         'pays' : "comeroun",
         'github': "github/yva",
-        'genre': "f",
+        'genre': "female",
         'isdone': false
     },
     {
-        'nom': "Pila",
-        'postnom' : "Christ",
-        'prenom' : "Christt",
+        'nom': "Jean",
+        'postnom' : "Coach",
+        'prenom' : "Claude",
         'pays' : "congo",
         'github': "github/christ",
-        'genre': "m",
+        'genre': "male",
         'isdone': false
     }
 ]
@@ -44,10 +44,12 @@ function loadapprennetInTable(){
     <td> ${list.github}</td>
 
     <td>
-    <button class='btn' data-nom="${list.nom}" data-postnom="${list.postnom}" data-prenom="${list.prenom}" 
+    <button class="btn btn-success" data-nom="${list.nom}" data-postnom="${list.postnom}" data-prenom="${list.prenom}" 
     data-pays="${list.pays}" data-genre="${list.genre}" data-github="${list.github}" 
-    onclick= "editApprennent(this)"> Modifier</button>
-    <button class='btn1' onclick="deleteApprennent(this, ${apprennents.indexOf(list)}); confirmation()"> Supprimer</button>
+    onclick= "editApprennent(this)"><i class="fas fa-edit"></i></button>
+    <button class="btn btn-danger" onclick="deleteApprennent(confirmation(this, ${apprennents.indexOf(list)}))"> 
+    <i class="fa fa-trash" aria-hidden="true"></i>
+   </button>
     </td>
     </tr>
     `
@@ -120,12 +122,10 @@ function deleteApprennent(e, index){
     loadapprennetInTable()
 }
 
-function confirmation(){
-    var result = confirm("Are you sure you want to delete?");
-    if(result){
-        return true;
-    }else{
-        return false;
+function confirmation(e, index){
+    let result = confirm("Are you sure you want to delete?");
+    if(result == true){
+        deleteApprennent(e, index);
     }
 }
 function editApprennent(e, list){

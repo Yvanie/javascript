@@ -5,57 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning javascript</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Gestion des apprennent</h1>
-    
-        <form name="form" id="form" onsubmit="event.preventDefault()">
-            <div>
-                <label for="nom">Nom</label><br>
-                <input type=" text" name="nom" id="nom" required >
+    <div class="container mt-4">
+        <div class="row col-md-6 col-md-offset-3 shadow ">
+            <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <h1>Gestion des apprennent</h1>
+                    </div>
+                    <div class="panel-body">
+                        <form name="form" id="form" onsubmit="event.preventDefault()">
+                            <div class="form-group">
+                                <label for="nom">Nom <i class="fa fa-class-name"></i></label><br>
+                                <input class="form-control" type=" text" name="nom" id="nom" required >
+                            </div>
+                            <div class="form-group">
+                                <label for="postnom">Postnom</label><br>
+                                <input class="form-control" type=" text" name="postnom" id="postnom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prenom">Prenom</label><br>
+                                <input class="form-control" type=" text" name="prenom" id="prenom" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pays">Pays</label><br>
+                                <input class="form-control" type=" text" name="pays" id="pays" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="genre">Genre</label><br>
+                                <select class="form-control" ype=" text" name="genre" id="genre" required >
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="github">Github</label><br>
+                                <input class="form-control" type=" text" name="github" id="github" required>
+                            </div>
+                                <button class="btn btn-primary w-100" type="submit" value="Submit" id="btnsubmit"></button>
+                    </form>
             </div>
-            <div>
-                <label for="postnom">Postnom</label><br>
-                <input type=" text" name="postnom" id="postnom" required>
-            </div>
-            <div>
-                <label for="prenom">Prenom</label><br>
-                <input type=" text" name="prenom" id="prenom" required>
-            </div>
-            <div>
-                <label for="pays">Pays</label><br>
-                <input type=" text" name="pays" id="pays" required>
-            </div>
-            <div>
-                <label for="genre">Genre</label><br>
-                <input type=" text" name="genre" id="genre" required>
-            </div>
-            <div>
-                <label for="github">Github</label><br>
-                <input type=" text" name="github" id="github" required>
-            </div><br>
-            <div>
-                <button type="submit" value="Submit" id="btnsubmit"></button>
-            </div>
-        </form>
-        <table class="list" >
-            <thead>
+        </div>
+    </div>
+        <table class="table" >
+            <thead class="bg-info">
                      <tr>
-                        <th>Nom</th>
-                        <th>Postnom</th>
-                        <th>Prenom</th>
-                        <th>Pays</th>
-                        <th>Genre</th>
-                        <th>Github</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Postnom</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Pays</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Github</th>
+                        <th scope="col">Action</th>
                     </tr>
             </thead>
             <tbody>
-
+                
             </tbody>
         </table>
     <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </div>
 </body>
 </html>
